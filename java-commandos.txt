@@ -1,0 +1,15 @@
+#Switch the current execution version:
+sudo update-alternatives --config java
+#Switch the current compiler version:
+sudo update-alternatives --config javac
+#Install a new JDK for java execution
+sudo update-alternatives --install /usr/bin/java java /home/dobber/ide/jdk-9/bin/java 1
+#Install a new JDK for java compiler
+sudo update-alternatives --install /usr/bin/javac javac /home/dobber/ide/jdk-9/bin/javac 1
+#Run executable jar
+java -jar name-of-jar.jar
+
+#THIS DOESN'T WORK YET
+# Set JAVA_HOME on java 9:
+#Open /etc/environment with sudo gedit /etc/environment and add JAVA_HOME="path/to/jdk"
+source /etc/environment
